@@ -237,7 +237,7 @@ class GildedRoseTest(unittest.TestCase):
   # Conjured Mana
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_before_sell_date(self):
+  def test_conjured_mana_before_sell_date(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = 5, quality = 10)
 
     gilded_rose.tick()
@@ -245,7 +245,7 @@ class GildedRoseTest(unittest.TestCase):
     self.assertEqual({'name': 'Conjured Mana Cake', 'days_remaining': 4, 'quality': 8}, gilded_rose.inspect())
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_before_sell_date_at_zero_quality(self):
+  def test_conjured_mana_before_sell_date_at_zero_quality(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = 5, quality = 0)
 
     gilded_rose.tick()
@@ -253,7 +253,7 @@ class GildedRoseTest(unittest.TestCase):
     self.assertEqual({'name': 'Conjured Mana Cake', 'days_remaining': 4, 'quality': 0}, gilded_rose.inspect())
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_on_sell_date(self):
+  def test_conjured_mana_on_sell_date(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = 0, quality = 10)
 
     gilded_rose.tick()
@@ -261,7 +261,7 @@ class GildedRoseTest(unittest.TestCase):
     self.assertEqual({'name': 'Conjured Mana Cake', 'days_remaining': -1, 'quality': 6}, gilded_rose.inspect())
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_on_sell_date_at_zero_quality(self):
+  def test_conjured_mana_on_sell_date_at_zero_quality(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = 0, quality = 0)
 
     gilded_rose.tick()
@@ -269,7 +269,7 @@ class GildedRoseTest(unittest.TestCase):
     self.assertEqual({'name': 'Conjured Mana Cake', 'days_remaining': -1, 'quality': 0}, gilded_rose.inspect())
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_after_sell_date(self):
+  def test_conjured_mana_after_sell_date(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = -10, quality = 10)
 
     gilded_rose.tick()
@@ -277,7 +277,7 @@ class GildedRoseTest(unittest.TestCase):
     self.assertEqual({'name': 'Conjured Mana Cake', 'days_remaining': -11, 'quality': 6}, gilded_rose.inspect())
 
   @unittest.skip('functionality not implemented')
-  def test_conjured_manage_after_sell_date_at_zero_quality(self):
+  def test_conjured_mana_after_sell_date_at_zero_quality(self):
     gilded_rose = GildedRose(name = 'Conjured Mana Cake', days_remaining = -10, quality = 0)
 
     gilded_rose.tick()
